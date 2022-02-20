@@ -8,9 +8,12 @@
         public float Tax { get; set; }
         public override string ToString()
         {
-            return $"{Id}-{Description}, " +
-                $"Precio: {Price},IVA: {Tax}";
+            return $"   {Id}\t{Description} " +
+                $"\n\tPrice......: {$"{Price:C2}",15}" +
+                $"\n\tTax........: {$"{Tax:P2}",17}";
+
         }
         public abstract decimal ValueToPay();
+
     }
 }
