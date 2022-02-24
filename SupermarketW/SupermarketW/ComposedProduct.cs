@@ -3,8 +3,8 @@
     public class ComposedProduct : Product
     {
         public float Discount { get; set; }
-        //public string Products { get; set; }
-        public List <Product>? Products { get; set; }
+
+        public Product? Products { get; set; }
 
         public override decimal ValueToPay()
         {
