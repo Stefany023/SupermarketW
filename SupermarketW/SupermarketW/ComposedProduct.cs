@@ -14,7 +14,7 @@
 
             foreach (Product Product in Products)
             {
-                Console.WriteLine(Product);
+                
                 TotalValue += Product.ValueToPay();
                 TotalToPay = TotalValue - (TotalValue * (decimal)Discount);
             }
