@@ -56,9 +56,6 @@ Console.WriteLine(product5);
 //invoice.AddProduct(product5);
 //Console.WriteLine(invoice);
 
-//Console.WriteLine("RECEIPT");
-//Console.WriteLine("-------------------------------------------------");
-
 //ICollection <Product> products = new List<Product>()
 //{ product1, product3 , product5,};
 

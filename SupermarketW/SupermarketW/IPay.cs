@@ -2,6 +2,6 @@
 {
     internal interface IPay
     {
-        public decimal valueValueToPay();
+        public decimal ValueToPay();
     }
 }

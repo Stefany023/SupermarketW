@@ -4,17 +4,40 @@
     {
         public float Discount { get; set; }
 
-        public Product? Products { get; set; }
+        public List<Product> Products { get; set; }
 
         public override decimal ValueToPay()
+
         {
-            return Price * (decimal)Tax + Price;
-        }
-        public override string ToString()
-        {
-            return $"{base.ToString()}" +
-                $"\n\tValue......:{$"{ValueToPay():C2}",16}";
+            decimal TotalValue = 0;
+            decimal TotalToPay = 0;
+
+            foreach (Product Product in Products)
+            {
+                Console.WriteLine(Product);
+                TotalValue += Product.ValueToPay();
+                TotalToPay = TotalValue - (TotalValue * (decimal)Discount);
+            }
+            return TotalToPay;
 
         }
+
+        public override string ToString()
+        {
+
+            return $"   {Id}\t{Description} " +
+            $"\n\tProducts...: {string.Join(", ", Products!.Select(product => product.Description).ToList())}" +
+            $"\n\tDiscount...: {$"{Discount:P2}",16}" +
+            $"\n\tValue......:{$"{ValueToPay():C2}",16}";
+
+        }
+
     }
+
+
+
 }
+
+
+
+
