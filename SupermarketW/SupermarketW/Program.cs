@@ -50,21 +50,8 @@ Console.WriteLine(product3);
 Console.WriteLine(product4);
 Console.WriteLine(product5);
 
-//Invoice invoice = new Invoice();
-//invoice.AddProduct(product1);
-//invoice.AddProduct(product3);
-//invoice.AddProduct(product5);
-//Console.WriteLine(invoice);
-
-//ICollection <Product> products = new List<Product>()
-//{ product1, product3 , product5,};
-
-//decimal payroll = 0;
-
-//foreach (Product product in products)
-//{
-//    Console.WriteLine(product);
-//    payroll += product.ValueToPay();
-//}
-//Console.WriteLine("                    ================");
-//Console.WriteLine($"TOTAL:            {$"{payroll:C2}",18}");
+Invoice invoice = new Invoice();
+invoice.AddProduct(product1);
+invoice.AddProduct(product3);
+invoice.AddProduct(product5);
+Console.WriteLine(invoice);
